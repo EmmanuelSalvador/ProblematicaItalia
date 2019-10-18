@@ -37,7 +37,7 @@ Author     : DELL
                     <div class="menu_area h-100">
                         <nav class="navbar h-100 navbar-expand-lg align-items-center">
                             <!-- Logo -->
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="index.jsp">
                                 <h1 style="color: #fff">Arte</h1>
                             </a>
 
@@ -48,15 +48,17 @@ Author     : DELL
 
                             <div class="collapse navbar-collapse justify-content-end" id="mosh-navbar">
                                 <ul class="navbar-nav animated" id="nav">
-                                    <li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li>
+                                    <li class="nav-item active"><a class="nav-link" href="index.jsp">Inicio</a></li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="moshDropdownMuseos" role="button"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Museos</a>
                                         <div class="dropdown-menu" aria-labelledby="moshDropdown">
-                                            <a class="dropdown-item" href="index.html">Por ciudad</a>
+                                            <a class="dropdown-item" href="index.jsp">Por ciudad</a>
                                             <a class="dropdown-item" href="about.html">Por popularidad</a>
                                             <div class="dropdown-divider"></div>
                                             <a class="dropdown-item" href="elements.html">Todos</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="administrarMuseos.html">Administrar</a>
                                         </div>
                                     </li>
                                     <li class="nav-item dropdown">
@@ -64,10 +66,12 @@ Author     : DELL
                                             data-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false">Pinturas</a>
                                         <div class="dropdown-menu" aria-labelledby="moshDropdown">
-                                            <a class="dropdown-item" href="index.html">Más famosas</a>
+                                            <a class="dropdown-item" href="index.jsp">Más famosas</a>
                                                 <a class="dropdown-item" href="about.html">Mejor valoradas</a>
                                                 <div class="dropdown-divider"></div>
                                                 <a class="dropdown-item" href="elements.html">Todas</a>
+                                                <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="administrarObras.html">Administrar</a>
                                         </div>
                                     </li>
                                     <li class="nav-item dropdown">
@@ -75,10 +79,12 @@ Author     : DELL
                                             data-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false">Escultras</a>
                                         <div class="dropdown-menu" aria-labelledby="moshDropdown">
-                                            <a class="dropdown-item" href="index.html">Más famosas</a>
+                                            <a class="dropdown-item" href="index.jsp">Más famosas</a>
                                                 <a class="dropdown-item" href="about.html">Mejor valoradas</a>
                                                 <div class="dropdown-divider"></div>
                                                 <a class="dropdown-item" href="elements.html">Todas</a>
+                                                <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="administrarObras.html">Administrar</a>
                                         </div>
                                     </li>
                                     <li class="nav-item dropdown">
@@ -86,10 +92,12 @@ Author     : DELL
                                             data-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false">Artistas</a>
                                         <div class="dropdown-menu" aria-labelledby="moshDropdown">
-                                            <a class="dropdown-item" href="index.html">Más famosos</a>
+                                            <a class="dropdown-item" href="index.jsp">Más famosos</a>
                                                 <a class="dropdown-item" href="about.html">Mejor valorados</a>
                                                 <div class="dropdown-divider"></div>
                                                 <a class="dropdown-item" href="elements.html">Todos</a>
+                                                <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="administrarArtistas.html">Administrar</a>
                                         </div>
                                     </li>
 

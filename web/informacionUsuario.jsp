@@ -7,7 +7,7 @@ and open the template in the editor.
 <html lang="en">
 
 <head>
-    <title>Nombre de la Página</title>
+    <title>Nombre de la Pï¿½gina</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -35,7 +35,7 @@ border-radius: 0;
                     <div class="menu_area h-100">
                         <nav class="navbar h-100 navbar-expand-lg align-items-center">
                             <!-- Logo -->
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="index.jsp">
                                 <h1 style="color: #fff">Arte</h1>
                             </a>
 
@@ -46,15 +46,17 @@ border-radius: 0;
 
                             <div class="collapse navbar-collapse justify-content-end" id="mosh-navbar">
                                 <ul class="navbar-nav animated" id="nav">
-                                    <li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li>
+                                    <li class="nav-item active"><a class="nav-link" href="index.jsp">Inicio</a></li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="moshDropdownMuseos" role="button"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Museos</a>
                                         <div class="dropdown-menu" aria-labelledby="moshDropdown">
-                                            <a class="dropdown-item" href="index.html">Por ciudad</a>
+                                            <a class="dropdown-item" href="index.jsp">Por ciudad</a>
                                             <a class="dropdown-item" href="about.html">Por popularidad</a>
                                             <div class="dropdown-divider"></div>
                                             <a class="dropdown-item" href="elements.html">Todos</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="administrarMuseos.html">Administrar</a>
                                         </div>
                                     </li>
                                     <li class="nav-item dropdown">
@@ -62,10 +64,12 @@ border-radius: 0;
                                             data-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false">Pinturas</a>
                                         <div class="dropdown-menu" aria-labelledby="moshDropdown">
-                                            <a class="dropdown-item" href="index.html">Más famosas</a>
+                                            <a class="dropdown-item" href="index.jsp">MÃ¡s famosas</a>
                                                 <a class="dropdown-item" href="about.html">Mejor valoradas</a>
                                                 <div class="dropdown-divider"></div>
                                                 <a class="dropdown-item" href="elements.html">Todas</a>
+                                                <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="administrarObras.html">Administrar</a>
                                         </div>
                                     </li>
                                     <li class="nav-item dropdown">
@@ -73,7 +77,33 @@ border-radius: 0;
                                             data-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false">Escultras</a>
                                         <div class="dropdown-menu" aria-labelledby="moshDropdown">
-                                            <a class="dropdown-item" href="index.html">Más famosas</a>
+                                            <a class="dropdown-item" href="index.jsp">MÃ¡s famosas</a>
+                                                <a class="dropdown-item" href="about.html">Mejor valoradas</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="elements.html">Todas</a>
+                                                <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="administrarObras.html">Administrar</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="moshDropdownArtistas" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">Artistas</a>
+                                        <div class="dropdown-menu" aria-labelledby="moshDropdown">
+                                            <a class="dropdown-item" href="index.jsp">MÃ¡s famosos</a>
+                                                <a class="dropdown-item" href="about.html">Mejor valorados</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="elements.html">Todos</a>
+                                                <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="administrarArtistas.html">Administrar</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="moshDropdownEsculturas" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">Escultras</a>
+                                        <div class="dropdown-menu" aria-labelledby="moshDropdown">
+                                            <a class="dropdown-item" href="index.jsp">Mï¿½s famosas</a>
                                                 <a class="dropdown-item" href="about.html">Mejor valoradas</a>
                                                 <div class="dropdown-divider"></div>
                                                 <a class="dropdown-item" href="elements.html">Todas</a>
@@ -84,7 +114,7 @@ border-radius: 0;
                                             data-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false">Artistas</a>
                                         <div class="dropdown-menu" aria-labelledby="moshDropdown">
-                                            <a class="dropdown-item" href="index.html">Más famosos</a>
+                                            <a class="dropdown-item" href="index.jsp">Mï¿½s famosos</a>
                                                 <a class="dropdown-item" href="about.html">Mejor valorados</a>
                                                 <div class="dropdown-divider"></div>
                                                 <a class="dropdown-item" href="elements.html">Todos</a>
@@ -111,14 +141,14 @@ border-radius: 0;
                                     if (request.getParameter("usuario")==null){
                                     %>
                                         <a href="registro.html" style="font-size: 15px; color: #fff">Registrarse</a>
-                                        <a href="login.html" style="font-size: 15px; color: #fff">/ Iniciar sesión</a>
+                                        <a href="login.html" style="font-size: 15px; color: #fff">/ Iniciar sesiï¿½n</a>
                                         <%
                                     }
                                     else{
                                     %>
                                         <a href="informacionUsuario.jsp"
                                             style="font-size: 15px; color: #fff"><%=request.getParameter("usuario")%></a>
-                                        <a href="index.jsp" style="font-size: 15px; color: #fff">/ Cerrar sesión</a>
+                                        <a href="index.jsp" style="font-size: 15px; color: #fff">/ Cerrar sesiï¿½n</a>
                                         <%
                                     }
                                     %>
@@ -143,9 +173,9 @@ border-radius: 0;
                 <div class="subscribe-newsletter-content text-center" data-wow-delay="0.5s">
                     <h1><%=request.getParameter("usuario")%></h1>
                     <form>
-                        <input type="text" placeholder="Aquí irá el nombre de usuario" name="usuario" required readonly>
-                        <input type="text" placeholder="Aquí irá el Email del usuario" name="email" required readonly>
-                        <input type="password" placeholder="Aquí irá la contraseña del usuario" name="pass" required readonly>
+                        <input type="text" placeholder="Aquï¿½ irï¿½ el nombre de usuario" name="usuario" required readonly>
+                        <input type="text" placeholder="Aquï¿½ irï¿½ el Email del usuario" name="email" required readonly>
+                        <input type="password" placeholder="Aquï¿½ irï¿½ la contraseï¿½a del usuario" name="pass" required readonly>
                         <br>
 
                     </form>
