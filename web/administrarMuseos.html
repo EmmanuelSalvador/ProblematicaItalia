@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+
+<head>
+    <title>Nombre de la Página</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="css/responsive.css" rel="stylesheet">
+    <script type="text/javascript" src="recursos/funciones.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!--<style type="text/css">
+.navbar {
+-webkit-border-radius: 0;
+-moz-border-radius: 0;
+border-radius: 0;
+}
+</style>-->
+</head>
+
+<body>
+
+    <!-- Inicio del Navbar -->
+    <header class="header_area clearfix" style="background-color:#232323">
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <!-- Menu Area Start -->
+                <div class="col-12 h-100">
+                    <div class="menu_area h-100">
+                        <nav class="navbar h-100 navbar-expand-lg align-items-center">
+                            <!-- Logo -->
+                            <a class="nav-link" href="index.html">
+                                <h1 style="color: #fff">Arte</h1>
+                            </a>
+
+                            <!-- Menu Area -->
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#mosh-navbar" aria-controls="mosh-navbar" aria-expanded="false"
+                                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+                            <div class="collapse navbar-collapse justify-content-end" id="mosh-navbar">
+                                <ul class="navbar-nav animated" id="nav">
+                                    <li class="nav-item"><a class="nav-link" href="index.jsp">Inicio</a></li>
+                                    <li class="nav-item active"><a class="nav-link" href="administrarMuseos.html">Museos</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="administrarObras.html">Obras</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="administrarArtistas.html">Artistas</a></li>
+                                    <li class="nav-item "><a class="nav-link" href="#">Comentarios</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Final del Navbar-->
+    <br><br><br><br><br><br><br><br><br>
+    <!--TABLA-->
+    <div class="wrapper-editor">
+
+        <!--Encabeado tabla-->
+        <div class="block my-4">
+            <div class="d-flex justify-content-center">
+                <h1> Administrar museos </h1>
+            </div>
+        </div>
+        <!--Fin Encabeado tabla-->
+
+        <div class="row d-flex justify-content-center modalWrapper">
+            <div class="modal fade addNewInputs" id="modalAdd1" tabindex="-1" role="dialog" aria-labelledby="modalAdd"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header text-center">
+                            <h4> Agregar un nuevo museo
+                            </h4>
+
+                            <button type="button" class="close text-primary" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                        </div>
+                        <div class="modal-body mx-3">
+                            <div class="md-form mb-5">
+
+                                <input type="text" id="inputName1" name="first_name" placeholder="Nombre"
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nombre'" required=""
+                                    class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="inputName1"> Nombre del museo
+                                </label>
+
+                            </div>
+                            <div class="md-form mb-5">
+
+                                <input type="text" id="inputPosition1" placeholder="Ciudad"
+                                    class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="inputPosition1">Ciudad del museo</label>
+
+                            </div>
+
+                            <div class="md-form mb-5">
+                                <input type="text" id="inputOfficeInput1" placeholder="Direccion"
+                                    class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="inputOfficeInput1">Dirección del museo
+                                </label>
+                            </div>
+
+                            <div class="md-form mb-5">
+                                <input type="text" id="inputAge1" class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="inputAge1">Descripción corta del museo</label>
+                            </div>
+
+                            <div class="md-form mb-5">
+                                <input type="text" id="inputDate1" class="form-control">
+                                <label data-error="wrong" data-success="right" for="inputDate1">Descripción larga del museo</label>
+                            </div>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center buttonAddFormWrapper">
+                            <button class="btn btn-outline-primary btn-block buttonAdd" data-dismiss="modal">Agregar museo
+                                <i class="fas fa-paper-plane-o ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="text-center">
+                <a href="" class="btn btn-info btn-rounded btn-md" data-toggle="modal" data-target="#modalAdd1">
+                    <i class="fas fa-plus-square ml-1"></i> Agregar </a>
+                <br>
+                <br>
+            </div>
+
+            <!--Ventana Modal Editar-->
+            <div class="modal fade modalEditClass" id="modalEdit1" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header text-center">
+                            <h4 class="modal-title w-100 font-weight-bold text-secondary ml-5">Editar información</h4>
+                            <button type="button" class="close text-secondary" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body mx-3">
+                            <div class="md-form mb-5">
+                                <input type="text" id="formNameEdit1" class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="formNameEdit1">Nombre</label>
+                            </div>
+
+                            <div class="md-form mb-5">
+                                <input type="text" id="formPositionEdit1" class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="formPositionEdit1">Ciudad</label>
+                            </div>
+
+                            <div class="md-form mb-5">
+                                <input type="text" id="formOfficeEdit1" class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="formOfficeEdit1">Direccion</label>
+                            </div>
+
+                            <div class="md-form mb-5">
+                                <input type="text" id="formAgeEdit1" class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="formAgeEdit1">Descripción corta</label>
+                            </div>
+
+                            <div class="md-form mb-5">
+                                <input type="text" id="formDateEdit1" class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="formDateEdit1">Descripcion larga</label>
+                            </div>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center editInsideWrapper">
+                            <button class="btn btn-outline-secondary btn-block editInside" data-dismiss="modal">Confirmar cambios
+                                <i class="fas fa-paper-plane-o ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Fin Ventana Modal Editar-->
+
+            <!--Ventana Modal Eliminar-->
+            <div class="modal fade" id="modalDelete1" tabindex="-1" role="dialog" aria-labelledby="modalDelete1"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header text-center">
+                            <h4 class="modal-title w-100 font-weight-bold ml-5 text-danger">Eliminar</h4>
+                            <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body mx-3">
+                            <p class="text-center h4">¿Estás seguro de que quieres eliminar este museo?</p>
+
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center deleteButtonsWrapper">
+                            <button type="button" class="btn btn-danger btnYesClass" id="btnYes1"
+                                data-dismiss="modal">Si</button>
+                            <button type="button" class="btn btn-primary btnNoClass" id="btnNo1"
+                                data-dismiss="modal">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Fin Ventana Modal Eliminar-->
+
+
+        </div>
+
+        <table id="dt-more-columns" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th class="th-sm"> Id
+
+                    </th>
+                    <th class="th-sm"> Nombre
+
+                    </th>
+                    <th class="th-sm">Ciudad
+
+                    </th>
+                    <th class="th-sm">Dirección
+
+                    </th>
+                    <th class="th-sm">Descripción corta
+
+                    </th>
+                    <th class="th-sm"> Descripción larga
+
+                    </th>
+                    <th class="th-sm"> Cantidad de visitas
+
+                    </th>
+                    <th class="th-sm"> Acción
+                        
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Galleria Borghese</td>
+                    <td>Piazzale Scipione Borghese, 5, 00197 Roma RM, Italia</td>
+                    <td>Roma</td>
+                    <td>Ubicado en la Villa Borghese, en Roma, es uno de los museos más populares en donde se
+                        pueden encontrar obras de Rafael, Canova, Tiziano, Caravaggio entre otros</td>
+                    <td>Ubicado en la Villa Borghese, en Roma, es uno de los museos más populares en donde se
+                        pueden encontrar obras de Rafael, Canova, Tiziano, Caravaggio entre otros.</td>
+                    <td>5</td>
+                   
+                    <td>
+                        <button class="btn btn-info btn-rounded btn-sm buttonEdit btn-block" data-toggle="modal"
+                            data-target="#modalEdit1">Editar </a>
+
+                            <button class="btn btn-danger btn-sm btn-rounded buttonDelete btn-block" data-toggle="modal"
+                                data-target="#modalDelete1"> Eliminar </a>
+
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+    <!--FIN TABLA-->
+
+    
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+    </body>
+</html>
