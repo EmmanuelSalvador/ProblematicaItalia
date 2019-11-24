@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" >
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link href="css/responsive.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <script type="text/javascript" src="recursos/funciones.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+        <script src="js/obras.js"></script>
+    </head>
+    <body>
+
+        <br><br><br><br><br><br><br><br><br>
+        <br><br>
+        <div class="block my-4">
+            <div class="d-flex justify-content-center">
+                <h1> Administrar obras </h1>
+            </div>
+        </div>
+        <!--Fin Encabeado tabla-->
+
+        <!-- Inicio Modal Nuevo -->
+        <div class="row d-flex justify-content-center modalWrapper">
+            <div class="modal fade addNewInputs" id="modalObraAdd" tabindex="-1" role="dialog" aria-labelledby="modalAdd"
+                 aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <br><br><br><br><br><br><br><br><br><br><br><br>
+                    <form>
+                        <div class="modal-content">
+                            <div class="modal-header text-center">
+                                <h4> Agregar una nueva obra
+                                </h4>
+
+                                <button type="button" class="close text-primary" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+
+                            </div>
+                            <div class="modal-body mx-3">
+                                <div class="md-form mb-5">
+
+                                    <input type="text" id="nombre_obraN" name="first_name" placeholder="Nombre"
+                                           onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nombre de la obra'" required
+                                           class="form-control validate">
+                                    <label data-error="wrong" data-success="right" for="inputName1"> Nombre de la obra
+                                    </label>
+
+                                </div>
+                                <div class="md-form mb-5">
+
+                                    <input type="text" id="anio_creacionN" placeholder="Año de creación de la obra (Solo números)" required
+                                           class="form-control validate">
+                                    <label data-error="wrong" data-success="right" for="inputPosition1">Año de creación de la obra</label>
+
+                                </div>
+
+                                <div class="md-form mb-5">
+                                    <input type="text" id="fk_id_artistaN" placeholder="Id del artista (Solo números)" required
+                                           class="form-control validate">
+                                    <label data-error="wrong" data-success="right" for="inputOfficeInput1">id del artista
+                                    </label>
+                                </div>
+
+                                <div class="md-form mb-5">
+                                    <input type="text" id="descripcion_cortaN" required placeholder="Descripción corta" class="form-control validate">
+                                    <label data-error="wrong" data-success="right" for="inputAge1">Descripción corta de la obra</label>
+                                </div>
+
+                                <div class="md-form mb-5">
+                                    <input type="text" id="descripcion_largaN" required placeholder="Descripción larga" class="form-control">
+                                    <label data-error="wrong" data-success="right" for="inputDate1">Descripción larga de la obra</label>
+                                </div>
+                                <div class="md-form mb-5">
+                                    <input type="text" id="fk_id_seccionN" placeholder="Id del artista (Solo números)" required class="form-control">
+                                    <label data-error="wrong" data-success="right" for="inputDate1">id sección</label>
+                                </div>
+                            </div>
+                            <div class="modal-footer d-flex justify-content-center buttonAddFormWrapper">
+                                <button class="btn btn-outline-primary btn-block buttonAdd" data-dismiss="modal" id="btnNuevaObra">Agregar obra nuevo
+
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Fin de Modal Nuevo -->
+
+            <!--Ventana Modal Editar-->
+            <div class="modal fade modalEditClass" id="modalObraEdit" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <div class="modal-header text-center">
+                            <h4 class="modal-title w-100 font-weight-bold text-secondary ml-5">Editar información</h4>
+                            <button type="button" class="close text-secondary" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="md-form mb-5">
+                            <input type="text" id="id_obraE" class="form-control validate">
+                            <label data-error="wrong" data-success="right" for="formNameEdit1">Clave</label>
+                        </div>
+                        <div class="md-form mb-5">
+                            <input type="text" id="nombre_obraE" class="form-control validate">
+                            <label data-error="wrong" data-success="right" for="formNameEdit1">Nombre</label>
+                        </div>
+
+                        <div class="md-form mb-5">
+                            <input type="text" id="anio_creacionE" class="form-control validate">
+                            <label data-error="wrong" data-success="right" for="formPositionEdit1">Año de creación</label>
+                        </div>
+
+                        <div class="md-form mb-5">
+                            <input type="text" id="fk_id_artistaE" class="form-control validate">
+                            <label data-error="wrong" data-success="right" for="formOfficeEdit1">id artista </label>
+                        </div>
+
+                        <div class="md-form mb-5">
+                            <input type="text" id="descripcion_cortaE" class="form-control validate">
+                            <label data-error="wrong" data-success="right" for="formAgeEdit1">Descripción corta</label>
+                        </div>
+
+                        <div class="md-form mb-5">
+                            <input type="text" id="descripcion_largaE" class="form-control validate">
+                            <label data-error="wrong" data-success="right" for="formDateEdit1">Descripcion larga</label>
+                        </div><div class="md-form mb-5">
+                            <input type="text" id="valoracionE" class="form-control validate">
+                            <label data-error="wrong" data-success="right" for="formDateEdit1">Valoración</label>
+                        </div>
+                        <div class="md-form mb-5">
+                            <input type="text" id="cantidad_visitasE" class="form-control validate">
+                            <label data-error="wrong" data-success="right" for="formDateEdit1">Cantidad de visitas</label>
+                        </div>
+                        <div class="md-form mb-5">
+                            <input type="text" id="fk_id_seccionE" class="form-control validate">
+                            <label data-error="wrong" data-success="right" for="formDateEdit1">Id sección</label>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center editInsideWrapper">
+                            <button class="btn btn-outline-secondary btn-block editInside" data-dismiss="modal" id="btnGuardarCambios">Confirmar cambios
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Fin Ventana Modal Editar-->
+
+            <div class="text-center">
+                <a href="" class="btn btn-info btn-rounded btn-md" data-toggle="modal" data-target="#modalObraAdd">
+                    Agregar </a>
+                <br>
+                <br>
+            </div>
+
+
+        </div>
+
+        <!-- Inicio del Navbar -->
+        <header class="header_area clearfix" style="background-color:#232323">
+            <div class="container-fluid h-100">
+                <div class="row h-100">
+                    <!-- Menu Area Start -->
+                    <div class="col-12 h-100">
+                        <div class="menu_area h-100">
+                            <nav class="navbar h-100 navbar-expand-lg align-items-center">
+                                <!-- Logo -->
+                                <a class="nav-link" href="index.jsp">
+                                    <h1 style="color: #fff">Arte</h1>
+                                </a>
+
+                                <!-- Menu Area -->
+                                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                        data-target="#mosh-navbar" aria-controls="mosh-navbar" aria-expanded="false"
+                                        aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+                                <div class="collapse navbar-collapse justify-content-end" id="mosh-navbar">
+                                    <ul class="navbar-nav animated" id="nav">
+                                        <li class="nav-item"><a class="nav-link" href="index.jsp">Inicio</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="administrarMuseos.html">Museos</a></li>
+                                        <li class="nav-item active"><a class="nav-link" href="administrarObras.html">Obras</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="administrarArtistas.html">Artistas</a></li>
+                                        <li class="nav-item "><a class="nav-link" href="#">Comentarios</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Final del Navbar-->
+        <br><br><br>
+
+
+
+        <div>
+            <table id="tbObras" > 
+                <thead>
+                    <tr>
+
+
+                        <th>Clave</th>
+                        <th>Nombre Obra</th>
+                        <th>Año de creación</th>
+                        <th>ID Artista</th>
+                        <th>Descripción corta</th>
+                        <th>Descripción larga</th>
+                        <th>Valoración</th>
+                        <th>Visitas</th>
+                        <th>Sección</th>
+                        <th>Botones</th>
+
+
+                    </tr>
+
+                </thead>
+            </table>
+        </div>
+    </body>
+</html>

@@ -69,7 +69,7 @@ public class ConsultaUsuario extends HttpServlet {
         
         //Crea el objeto necesario para devolver respuesta
         PrintWriter p = response.getWriter();
-        p.print("{\"datos\":"+ejb.consultaUsuario()+"}");
+        p.print("{\"data\":"+ejb.consultaUsuario()+"}");
     }
 
     /**

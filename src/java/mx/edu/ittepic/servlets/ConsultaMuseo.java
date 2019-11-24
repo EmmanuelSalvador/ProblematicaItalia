@@ -69,7 +69,7 @@ public class ConsultaMuseo extends HttpServlet {
         
         //Crea el objeto necesario para devolver respuesta
         PrintWriter p = response.getWriter();
-        p.print("{\"datos\":"+ejb.consultaMuseo()+"}");
+        p.print("{\"data\":"+ejb.consultaMuseo()+"}");
     }
 
     /**

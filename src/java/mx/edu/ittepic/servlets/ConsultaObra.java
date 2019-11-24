@@ -69,7 +69,7 @@ public class ConsultaObra extends HttpServlet {
         
         //Crea el objeto necesario para devolver respuesta
         PrintWriter p = response.getWriter();
-        p.print("{\"datos\":"+ejb.consultaObra()+"}");
+        p.print("{\"data\":"+ejb.consultaObra()+"}");
     }
 
     /**
